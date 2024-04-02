@@ -7,7 +7,7 @@ const TextToSpeech = ({ text, parentCallback }) => {
   const audioRef = useRef();
   const apiKey = process.env.REACT_APP_API_KEY;
 
-  console.log("Rhis is my API key", apiKey)
+  console.log("This is my API key", apiKey)
 
   const apiBody = {
     model: "tts-1",

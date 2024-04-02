@@ -17,5 +17,3 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_AUDIO_DESCRIPTIONS_C2C33 }}'
           channelId: live
           projectId: audio-descriptions-c2c33
-    env:
-      REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
