@@ -18,5 +18,5 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_AUDIO_DESCRIPTIONS_C2C33 }}'
           projectId: audio-descriptions-c2c33
-      env:
-        REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
+    env:
+      REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
