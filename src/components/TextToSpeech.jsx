@@ -1,37 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@mui/material";
+import axios from "axios"; // Import axios
 
 const TextToSpeech = ({ text, parentCallback }) => {
   const [audioFile, setAudioFile] = useState();
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef();
-  const apiKey = process.env.REACT_APP_API_KEY;
 
-  console.log("This is my API key", apiKey)
+  useEffect(() => {
+    handleTextToSpeech();
+  }, [text]);
 
-  const apiBody = {
-    model: "tts-1",
-    input: text,
-    voice: "alloy",
-  };
-
-  const handleTextToSpeech = async () => {
-    try {
-      const response = await fetch("https://api.openai.com/v1/audio/speech", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-          Authorization: "Bearer " + apiKey,
-        },
-        responseType: "arraybuffer",
-        body: JSON.stringify(apiBody),
-      })
-        .then((data) => {
-          return data.blob();
-        })
-        .then((data) => {
-          console.log(data);
-          const audioUrl = URL.createObjectURL(data);
+  const handleTextToSpeech = () => {
+    const audioRecieved = {
+      method: "GET",
+      url: 'http://localhost:8000/speech',
+      params: {textToConvert: text}
+    };
+    axios.request(audioRecieved).then((response) => {
+      // console.log("Response:", response.data.data); 
+      const blob = new Blob([new Uint8Array(response.data.data)], { type: 'audio/mpeg' });
+      const audioUrl = URL.createObjectURL(blob);
           setAudioFile(audioUrl);
           const audio = audioRef.current;
           audio.src = audioUrl;
@@ -45,15 +34,10 @@ const TextToSpeech = ({ text, parentCallback }) => {
           return () => {
             URL.revokeObjectURL(audioUrl);
           };
-        });
-    } catch (error) {
-      console.error("Error converting text to speech:", error);
-    }
+    }).catch((error) => {
+      console.log(error);
+    });
   };
-
-  useEffect(() => {
-    handleTextToSpeech();
-  }, [text]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
