@@ -19,6 +19,7 @@ const TextToSpeech = ({ text, parentCallback }) => {
     };
     axios.request(audioRecieved).then((response) => {
       // console.log("Response:", response.data.data); 
+      // console.log("Recieving data from backend", response.data.data)
       const blob = new Blob([new Uint8Array(response.data.data)], { type: 'audio/mpeg' });
       const audioUrl = URL.createObjectURL(blob);
           setAudioFile(audioUrl);

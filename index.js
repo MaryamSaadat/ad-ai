@@ -34,7 +34,7 @@ app.get("/speech", (req, res) => {
     }
 
     axios.request(options).then((response) => {
-        // res.json(response.data)
+        res.json(response.data)
         // console.log("My response:", response.data)
     }).catch((error) => {
         console.log(error)
