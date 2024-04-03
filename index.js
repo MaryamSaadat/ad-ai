@@ -12,10 +12,6 @@ const OpenAI = require("openai");
 const apiKey= process.env.GPT_API_KEY;
 
 app.get("/", (req, res) => {
-    res.send("Welcome to my Node.js backend!");
-  });
-
-app.get("/speech", (req, res) => {
     const apiBody = {
     model: "tts-1",
     input: req.query.textToConvert,
