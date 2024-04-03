@@ -12,6 +12,11 @@ const OpenAI = require("openai");
 const apiKey= process.env.GPT_API_KEY;
 
 app.get("/", (req, res) => {
+    res.send("Welcome to my Node.js backend!");
+  });
+
+app.get("/speech", (req, res) => {
+    res.json("I am coming in the speech module")
     const apiBody = {
     model: "tts-1",
     input: req.query.textToConvert,
@@ -29,7 +34,7 @@ app.get("/", (req, res) => {
     }
 
     axios.request(options).then((response) => {
-        res.json(response.data)
+        // res.json(response.data)
         // console.log("My response:", response.data)
     }).catch((error) => {
         console.log(error)
