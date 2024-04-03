@@ -14,7 +14,7 @@ const TextToSpeech = ({ text, parentCallback }) => {
   const handleTextToSpeech = () => {
     const audioRecieved = {
       method: "GET",
-      url: 'http://localhost:8000/speech',
+      url: '"https://ad-ai-study.onrender.com/speech"',
       params: {textToConvert: text}
     };
     axios.request(audioRecieved).then((response) => {
