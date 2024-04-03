@@ -16,7 +16,6 @@ app.get("/", (req, res) => {
   });
 
 app.get("/speech", (req, res) => {
-    res.json("I am coming in the speech module")
     const apiBody = {
     model: "tts-1",
     input: req.query.textToConvert,
