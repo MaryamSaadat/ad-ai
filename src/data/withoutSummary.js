@@ -21,12 +21,8 @@ export const withOutSummary = {
           "text": "Disagree"
          },
          {
-          "value": "slightlyDisagree",
-          "text": "Slightly Disagree"
-         },
-         {
-          "value": "slightyAgree",
-          "text": "Slightly Agree"
+          "value": "neutral",
+          "text": "Neutral"
          },
          "Agree",
          {

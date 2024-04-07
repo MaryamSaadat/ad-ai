@@ -119,7 +119,7 @@ const VideoPlayer = (props) => {
       </video>
       <div>
 
-        <Typography variant="h6" color={"primary.light"} paddingTop={2}>
+        <Typography variant="h6" color={"primary.dark"} paddingTop={2}>
           {props.title}
         </Typography>
         <hr />

@@ -20,14 +20,7 @@ export const json = {
           "value": "disagree",
           "text": "Disagree"
          },
-         {
-          "value": "slightlyDisagree",
-          "text": "Slightly Disagree"
-         },
-         {
-          "value": "slightyAgree",
-          "text": "Slightly Agree"
-         },
+         "Neutral",
          "Agree",
          {
           "value": "stronglyAgree",

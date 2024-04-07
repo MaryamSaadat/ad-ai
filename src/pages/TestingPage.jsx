@@ -81,7 +81,7 @@ const TestingPage = () => {
           borderBottom: "3px solid #19b394",
         }}
       >
-        <Typography variant="body1" color={"#19b394"}>
+        <Typography variant="body1" color={"black"}>
           You will be watching a series of 1-2 minute long videos. 
           <br/>
           Each video has an audio description, to request a concise description press "C" on your keypad.

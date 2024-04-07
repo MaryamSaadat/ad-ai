@@ -44,40 +44,11 @@ export const infoData = {
         "inputType": "number"
        },
        {
-        "type": "radiogroup",
-        "name": "impairmentLevel",
-        "title": "What is your level of visual impairment?",
+        "type": "comment",
+        "name": "impairment",
+        "title": "Briefly describe your impairment level and how you acquired it.",
         "isRequired": true,
-        "choices": [
-         {
-          "value": "total",
-          "text": "Total Blindness"
-         },
-         {
-          "value": "partial",
-          "text": "Low vision"
-         },
-         {
-          "value": "functional",
-          "text": "Functional Blindness – Visual impairment severe enough to impact daily activities."
-         }
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "blindnessType",
-        "title": "Is your impairment acquired since birth or later in life?",
-        "isRequired": true,
-        "choices": [
-         {
-          "value": "total",
-          "text": "Congenital blindness"
-         },
-         {
-          "value": "partial",
-          "text": "Acquired blindness"
-         }
-        ]
+        "rows": 2
        },
        {
         "type": "checkbox",

@@ -42,7 +42,7 @@ const VideoPage = () => {
         // Handle the data retrieved from Firestore
         // console.log("Document data:", filteredData);
         // console.log("type:", typeof(watched));
-        const unwatchedVideos = filteredData.filter((item,index) => !watched.includes(index));
+        const unwatchedVideos = filteredData.filter((item,index) => !watched.includes(item.identification));
         console.log("unwatched",unwatchedVideos)
         if (unwatchedVideos.length === 0){
           navigate('/End')
@@ -53,9 +53,9 @@ const VideoPage = () => {
         var keys = Object.keys(unwatchedVideos);
         var randomKey = keys.length * Math.random() << 0;
         // adding the watched video id to all the watched videos
-        setWatched([...watched, randomKey]);
-        setwatchedID(randomKey)
-        console.log("randomkey",randomKey)
+        setWatched([...watched, unwatchedVideos[keys[randomKey]].identification]);
+        setwatchedID(unwatchedVideos[keys[randomKey]].identification)
+        console.log("randomkey",randomKey, unwatchedVideos[keys[randomKey]].identification) 
         setDescriptions(unwatchedVideos[keys[randomKey]])
         setIsSummary(unwatchedVideos[keys[randomKey]].summary)
         setIsLoading(false); 
