@@ -1,29 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.11fe879d.css",
-    "main.js": "/static/js/main.50c11ccb.js",
+    "main.js": "/static/js/main.3855562a.js",
     "static/js/787.61b4965e.chunk.js": "/static/js/787.61b4965e.chunk.js",
-    "static/media/Animals1.mp4": "/static/media/Animals1.131142c87eb42cb3fc1f.mp4",
-    "static/media/Animals2.mp4": "/static/media/Animals2.cc7dd5c6bd8726c1c4d3.mp4",
-    "static/media/vlog2.mp4": "/static/media/vlog2.a58aae10a3a20241cd99.mp4",
-    "static/media/cooking2.mp4": "/static/media/cooking2.e8ca97e2fff51bc00427.mp4",
-    "static/media/vlog1.mp4": "/static/media/vlog1.38604d516bec645548e2.mp4",
-    "static/media/film2.mp4": "/static/media/film2.78ab387f240f1521c1c0.mp4",
-    "static/media/education2.mp4": "/static/media/education2.93a6dfc31988a1f1b068.mp4",
-    "static/media/film1.mp4": "/static/media/film1.63ca455d3d2392bc5d98.mp4",
-    "static/media/health&fitness2.mp4": "/static/media/health&fitness2.462fe71c36f6e25767e1.mp4",
-    "static/media/beauty1.mp4": "/static/media/beauty1.0748bdd815d3a651ea1e.mp4",
-    "static/media/beauty2.mp4": "/static/media/beauty2.cae6c53fe6f1630e97c1.mp4",
-    "static/media/education1.mp4": "/static/media/education1.693459ce001ee9d5033f.mp4",
-    "static/media/cooking1.mp4": "/static/media/cooking1.9586b86f0767acdc687e.mp4",
-    "static/media/health&fitness1.mp4": "/static/media/health&fitness1.7d90c5585363c066948b.mp4",
     "index.html": "/index.html",
     "main.11fe879d.css.map": "/static/css/main.11fe879d.css.map",
-    "main.50c11ccb.js.map": "/static/js/main.50c11ccb.js.map",
+    "main.3855562a.js.map": "/static/js/main.3855562a.js.map",
     "787.61b4965e.chunk.js.map": "/static/js/787.61b4965e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.11fe879d.css",
-    "static/js/main.50c11ccb.js"
+    "static/js/main.3855562a.js"
   ]
 }

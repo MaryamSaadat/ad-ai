@@ -8,7 +8,7 @@ export const json = {
        {
         "type": "matrix",
         "name": "detail",
-        "title": "To what extent do you agree with the following statements?",
+        "title": "For the audio descriptions of the video you just watched, to what extent do you agree with the following statements?",
         "isRequired": true,
         "rowTitleWidth": "500px",
         "columns": [
@@ -30,11 +30,11 @@ export const json = {
         "rows": [
          {
           "value": "confusion",
-          "text": "There was no confusion or ambiguity in understanding the content of the videos due to the audio descriptions"
+          "text": "The audio descriptions made watching the video more efficient"
          },
          {
           "value": "sufficient",
-          "text": "The information provided in the audio descriptions was sufficient for comprehending the content of the videos"
+          "text": "The information provided in the audio descriptions was effective in helping me understand the visual content of the vide"
          },
          {
           "value": "enjoyable",

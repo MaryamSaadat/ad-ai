@@ -7,7 +7,8 @@ import videoPaths from "../data/paths";
 
 const VideoPlayer = (props) => {
   // console.log("My descriptions",props)
-  const video = require("./videos/" + props.path);
+  // const video = require("./videos/" + props.path);
+  const video = props.path;
   const defaultDescription = {
     descriptions: "No descriptions playing",
     time_stamp_start: "-",
