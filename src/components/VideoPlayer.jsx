@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Typography, Box, Chip } from "@mui/material";
+import { Typography, Box, Chip, Button } from "@mui/material";
 import { TextToSpeech } from ".";
 import formatTime from "../utils/functions";
 import videoPaths from "../data/paths";
@@ -86,6 +86,12 @@ const VideoPlayer = (props) => {
     videoElement.play();
   };
 
+  const handleRestart = () => {
+    const videoElement = document.getElementById("video");
+    videoElement.load();
+    videoElement.play();
+  }
+
   useEffect(() => {
     const handleVideoEnded = () => {
       const req = descRequests
@@ -119,6 +125,18 @@ const VideoPlayer = (props) => {
         <source src={video} type="video/mp4" />
       </video>
       <div>
+
+      <Button
+          sx={{
+            backgroundColor: "secondary.main",
+            color: "white",
+            margin: "10px",
+          }}
+          className="category-btn"
+          onClick={handleRestart}
+        >
+          Restart Video
+        </Button>
 
         <Typography variant="h6" color={"primary.dark"} paddingTop={2}>
           {props.title}

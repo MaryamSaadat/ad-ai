@@ -20,14 +20,16 @@ const WoSummaryPage = () => {
     const [watchedID, setwatchedID] = useState(location.state.id);
     const navigate = useNavigate();
   
-    const infoCollectionRef = collection(db, "surveyAnswers");
+    const infoCollectionRef = collection(db, "questionnaire");
   
     const onSubmitInfo = async (info) => {
       var data = {
         videoID: watchedID,
         participantCode: localStorage.getItem('particpant-code'),
         anyQuestion: info.anyQuestion,
-        detail: info.detail,
+        efficient: info.efficient,
+        effective: info.efficient,
+        enjoyable: info.enjoyable,
       }
       console.log(data)
       navigate('/VideoPage', {state: { watched: watched}})

@@ -1,17 +1,17 @@
 export const json = {
     "title": "Feedback",
+    "description": "To what extent do you agree with the following statements?",
     "logoPosition": "right",
     "pages": [
      {
       "name": "page1",
       "elements": [
        {
-        "type": "matrix",
-        "name": "detail",
-        "title": "For the audio descriptions of the video you just watched, to what extent do you agree with the following statements?",
+        "type": "radiogroup",
+        "name": "efficient",
+        "title": "The audio descriptions made watching the video more efficient",
         "isRequired": true,
-        "rowTitleWidth": "500px",
-        "columns": [
+        "choices": [
          {
           "value": "stronglyDisagree",
           "text": "Strongly disagree"
@@ -20,25 +20,73 @@ export const json = {
           "value": "disagree",
           "text": "Disagree"
          },
-         "Neutral",
-         "Agree",
+         {
+          "value": "neutral",
+          "text": "Neutral"
+         },
+         {
+          "value": "agree",
+          "text": "Agree"
+         },
          {
           "value": "stronglyAgree",
           "text": "Strongly Agree"
          }
-        ],
-        "rows": [
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "effective",
+        "title": "The information provided in the audio descriptions was effective in helping me understand the visual content of the video.",
+        "isRequired": true,
+        "choices": [
          {
-          "value": "confusion",
-          "text": "The audio descriptions made watching the video more efficient"
+          "value": "stronglyDisagree",
+          "text": "Strongly disagree"
          },
          {
-          "value": "sufficient",
-          "text": "The information provided in the audio descriptions was effective in helping me understand the visual content of the vide"
+          "value": "disagree",
+          "text": "Disagree"
          },
          {
-          "value": "enjoyable",
-          "text": "The experience of listening to the audio descriptions while watching the videos was enjoyable"
+          "value": "neutral",
+          "text": "Neutral"
+         },
+         {
+          "value": "agree",
+          "text": "Agree"
+         },
+         {
+          "value": "stronglyAgree",
+          "text": "Strongly Agree"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "enjoyable",
+        "title": "The experience of listening to the audio descriptions while watching the videos was enjoyable",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "stronglyDisagree",
+          "text": "Strongly disagree"
+         },
+         {
+          "value": "disagree",
+          "text": "Disagree"
+         },
+         {
+          "value": "neutral",
+          "text": "Neutral"
+         },
+         {
+          "value": "agree",
+          "text": "Agree"
+         },
+         {
+          "value": "stronglyAgree",
+          "text": "Strongly Agree"
          }
         ]
        },

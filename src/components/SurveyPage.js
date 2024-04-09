@@ -20,7 +20,7 @@ function SurveyPage() {
   const [watchedID, setwatchedID] = useState(location.state.id);
   const navigate = useNavigate();
 
-  const infoCollectionRef = collection(db, "surveyAnswers");
+  const infoCollectionRef = collection(db, "questionnaire");
 
   const onSubmitInfo = async (info) => {
     var data = {
@@ -28,7 +28,9 @@ function SurveyPage() {
       participantCode: localStorage.getItem('particpant-code'),
       anyQuestion: info.anyQuestion,
       summary: info.summary,
-      detail: info.detail,
+      efficient: info.efficient,
+      effective: info.efficient,
+      enjoyable: info.enjoyable,
     }
     console.log(data)
     navigate('/VideoPage', {state: { watched: watched}})

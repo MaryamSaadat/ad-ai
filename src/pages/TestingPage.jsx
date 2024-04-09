@@ -27,11 +27,12 @@ const TestingPage = () => {
         const filteredData = data.docs.map((doc) => ({
           ...doc.data(),
         }));
-        // Handle the data retrieved from Firestore
-        // console.log("Document data:", filteredData);
-        // adding the watched video id to all the watched videos
-        // console.log("randomkey",randomKey)
-        setDescriptions(filteredData[1]);
+        // console.log("filtered data",filteredData)
+        if (filteredData) {
+          setDescriptions(filteredData[2]);
+        } else {
+          console.error("Document not found");
+        }
         setIsLoading(false);
       } catch (err) {
         console.error("Error fetching document:", err);
@@ -64,7 +65,7 @@ const TestingPage = () => {
   };
 
   const handleEnd = () => {
-    navigate("/VideoPage", { state: { watched: [] } });
+    navigate("/VideoPage", { state: { watched: [1] } });
   };
 
   return (
