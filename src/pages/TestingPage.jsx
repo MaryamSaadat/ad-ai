@@ -29,7 +29,7 @@ const TestingPage = () => {
         }));
         // console.log("filtered data",filteredData)
         if (filteredData) {
-          setDescriptions(filteredData[2]);
+          setDescriptions(filteredData[1]);
         } else {
           console.error("Document not found");
         }
