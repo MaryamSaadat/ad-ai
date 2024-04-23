@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import {Box, createTheme, ThemeProvider} from '@mui/material';
 import { Instructional, PersonalInfo, SurveyPage, VideoPage} from './components';
-import {UploadVideo, ConsentPage, WoSummaryPage, TestingPage, FinalPage, AllVideos} from './pages/index'
+import {UploadVideo, ConsentPage, WoSummaryPage, TestingPage, FinalPage, AllVideos, Responses} from './pages/index'
 
 const theme = createTheme({
   // The colurs are turned opposite
@@ -37,6 +37,7 @@ const App = () => (
             <Route path='/Testing' element={<TestingPage/>} />
             <Route path='/End' element={<FinalPage/>} />
             <Route path='/AllVideos' element={<AllVideos/>} />
+            <Route path='/Responses' element={<Responses/>} />
         </Routes>
     </Box>
     </BrowserRouter>

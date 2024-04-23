@@ -37,6 +37,48 @@ export const infoData = {
         "showOtherItem": true
        },
        {
+        "type": "radiogroup",
+        "name": "ethnicity",
+        "title": "Please select your ethnicity.",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "Hispanic",
+          "text": "Hispanic or Latino"
+         },
+         {
+          "value": "NotHispanic",
+          "text": "Not Hispanic or Latino"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "ethnicBackground",
+        "visibleIf": "{ethnicity} = 'NotHispanic'",
+        "title": "Which racial or ethnic backgrounds do you identify with? You can select one or more options that apply to you.",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "AmericanIndian",
+          "text": "American American Indian or Alaska Native"
+         },
+         "Asian",
+         {
+          "value": "Black",
+          "text": "Black or African American"
+         },
+         {
+          "value": "NativeHawaiin",
+          "text": "Native Hawaiian or Other Pacific Islander"
+         },
+         {
+          "value": "White",
+          "text": "White or Alaska Native"
+         }
+        ]
+       },
+       {
         "type": "text",
         "name": "age",
         "title": "Age",
