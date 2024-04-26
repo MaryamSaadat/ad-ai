@@ -10,12 +10,7 @@ import {
 import { Navbar } from "../components";
 import { useNavigate } from "react-router-dom";
 import { db, auth, storage } from "../config/firebase";
-import {
-  collection,
-  getDocs,
-  addDoc,
-  doc,
-} from "firebase/firestore";
+import { collection, getDocs, addDoc, doc } from "firebase/firestore";
 
 const ConsentPage = () => {
   const [checked, setChecked] = useState(false);
@@ -43,14 +38,14 @@ const ConsentPage = () => {
       } else {
         const data = {
           participantName: name,
-          dateSigned: date, 
-          consent: "I agree to be audio recorded and to allow the study investigators to keep my de-identified data to be used in future research studies as described above.",
-        }
+          dateSigned: date,
+          consent:
+            "I agree to be audio recorded and to allow the study investigators to keep my de-identified data to be used in future research studies as described above.",
+        };
         const consentRef = collection(db, "consents");
         try {
           await addDoc(consentRef, data);
           navigate("/Info");
-          
         } catch (err) {
           console.error("This is my error:", err);
         }
@@ -59,7 +54,6 @@ const ConsentPage = () => {
       alert("Please agree to terms and conditions");
     }
   };
-
 
   return (
     <>
@@ -157,6 +151,34 @@ const ConsentPage = () => {
         </Typography>
         <Typography variant="h6">Confidentiality:</Typography>
         <Typography variant="body1">
+          This research is covered by a Certificate of Confidentiality from the
+          National Institutes of Health. This means that the researchers cannot
+          release or use information, documents, or samples that may identify
+          you in any action or suit unless you say it is okay. They also cannot
+          provide them as evidence unless you have agreed. This protection
+          includes federal, state, or local civil, criminal, administrative,
+          legislative, or other proceedings. An example would be a court
+          subpoena.
+          <br />
+          There are some important things that you need to know. The Certificate
+          DOES NOT stop reporting that federal, state or local laws require.
+          Some examples are laws that require reporting of child or elder abuse,
+          some communicable diseases, and threats to harm yourself or others.
+          The Certificate CANNOT BE USED to stop a sponsoring United States
+          federal or state government agency from checking records or evaluating
+          programs. The Certificate DOES NOT stop disclosures required by the
+          federal Food and Drug Administration (FDA). The Certificate also DOES
+          NOT prevent your information from being used for other research if
+          allowed by federal regulations.
+          <br />
+          Researchers may release information about you when you say it is okay.
+          For example, you may give them permission to release information to
+          insurers, medical providers or any other persons not connected with
+          the research. The Certificate of Confidentiality does not stop you
+          from willingly releasing information about your involvement in this
+          research. It also does not prevent you from having access to your own
+          information.
+          <br />
           The research data will be kept in a secure location and only the
           researcher will have access to the data. All research data will be
           stored in an encrypted document on a password protected computer. All
