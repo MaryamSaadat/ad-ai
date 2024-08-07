@@ -16,10 +16,12 @@ app.get("/", (req, res) => {
   });
 
 app.get("/speech", (req, res) => {
-    const apiBody = {
-    model: "tts-1",
-    input: req.query.textToConvert,
-    voice: "alloy",
+  const { textToConvert, speed } = req.query;
+  const apiBody = {
+      model: "tts-1",
+      input: textToConvert,
+      voice: "alloy",
+      speed: parseFloat(speed) || 1.0, // Default speed is 1.0 if not provided
   };
     const options = {
                 url:"https://api.openai.com/v1/audio/speech",
@@ -43,45 +45,3 @@ app.get("/speech", (req, res) => {
 
 
 app.listen(8000, () => console.log(`Server is running on port ${PORT}`));
-
-
-
-// const PORT = 8000;
-// const express = require("express");
-// const cors = require("cors");
-// const axios = require("axios");
-// require("dotenv").config();
-
-// const app = express();
-
-// app.use(cors());
-
-// const OpenAI = require("openai");
-// const openai = new OpenAI({
-//   apiKey: process.env.GPT_API_KEY,
-// });
-
-// app.get("/", (req, res) => {
-//   res.json("hi");
-// });
-
-// app.get("/speech", async (req, res) => {
-//   console.log("Speech synthesis initializing.", req);
-//   try {
-//     console.log("Speech synthesis initializing.");
-//     const mp3 = await openai.audio.speech
-//       .create({
-//         model: "tts-1",
-//         voice: "onyx",
-//         input: "my text is this",
-//       })
-//       .then((data) => {
-//         console.log("Speech synthesis complete.",data);
-//       });
-//   } catch (error) {
-//     console.log("Speech synthesis failed.");
-//     console.error(error);
-//   }
-// });
-
-// app.listen(8000, () => console.log(`Server is running on port ${PORT}`));
